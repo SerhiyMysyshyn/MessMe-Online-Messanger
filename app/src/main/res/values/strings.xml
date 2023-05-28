@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">MessMe</string>
+
+    <string name="screen_register">Реєстрація</string>
+    <string name="screen_login">Авторизація</string>
+    <string name="screen_friends">Друзі</string>
+    <string name="screen_account">Акаунт</string>
+    <string name="screen_user">Користувач</string>
+    <string name="screen_forget_password">Відновлення паролю</string>
+
+    <string name="error_network">Відсутнє підключення до мережі Інтернет</string>
+    <string name="error_server">Помилка сервера.</string>
+    <string name="error_email_already_exist">даний Email вже існує.</string>
+    <string name="error_password_mismatch">Паролі не співпадають.</string>
+    <string name="error_auth">Невірний email або пароль.</string>
+    <string name="error_already_friend">Вже ваш друг.</string>
+    <string name="error_already_requested_friend">Запит в друзі вже відправлений.</string>
+    <string name="error_contact_not_found">Користувача не знайдено.</string>
+    <string name="error_picking_file">Помилка під час обробки файлу, спробуйте ще раз</string>
+    <string name="error_wrong_password">Неправильний пароль</string>
+    <string name="error_empty_password">Поле для введення паролю не може бути пустим</string>
+    <string name="email_not_registered">Email не зареєстрований</string>
+    <string name="error_cant_send_email">Неможливо відправити на цей email</string>
+
+    <string name="messages_notification_channel">MessMe notification channel</string>
+    <string name="sos_notification_channel">MessMe SOS-notification channel</string>
+
+
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="confirm_password">Підтвердіть пароль</string>
+    <string name="name">Імʼя</string>
+    <string name="register">Реєстрація</string>
+    <string name="already_have_account">Вже маєте акаунт?</string>
+    <string name="dont_have_account">Ще не маєте акаунта?</string>
+    <string name="forget_password">Забули пароль?</string>
+    <string name="login">Вхід</string>
+    <string name="chats">Мої листування</string>
+    <string name="friends">Друзі</string>
+    <string name="settings">Налаштування</string>
+    <string name="add_friend">Додати друга</string>
+    <string name="profile">Акаунт</string>
+    <string name="friend_requests">Запрошення у друзі</string>
+    <string name="logout">Вихід</string>
+
+    <string name="name_colon">Імʼя:</string>
+    <string name="email_colon">Email:</string>
+    <string name="status">Статус</string>
+    <string name="status_colon">Статус:</string>
+    <string name="current_password">Поточний пароль</string>
+    <string name="current_password_colon">Поточний пароль:</string>
+    <string name="new_password">Новий пароль</string>
+    <string name="new_password_colon">Новий пароль:</string>
+    <string name="update_account">Оновити дані</string>
+    <string name="send_request">Надіслати запит</string>
+    <string name="write_message">Написати повідомлення</string>
+
+
+    <string name="wants_add_as_friend">хоче добавити вас у список друзів</string>
+    <string name="approved_friend_request">прийняв ваш запит у друзі</string>
+    <string name="cancelled_friend_request">відхилив ваш запит в друзі</string>
+
+    <string name="delete_friend">Видалити друга?</string>
+
+    <string name="message_promt_app">Користувача не знайдено! Відправити йому посилання на наш додаток?
+    </string>
+    <string name="message_text_promt_app">Встанови додаток і почни спілкуватись зі своїми  друзями:</string>
+    <string name="message_subject_promt_app">Привіт</string>
+    <string name="url_google_play">https://play.google.com/store/apps/details?id=</string>
+
+    <string name="friend_list_empty">Ваш список друзів порожній. Перейдіть в розділ \"Друзі\" та добавте свого першого друга!</string>
+    <string name="friend_request">Запит в друзі</string>
+    <string name="friend_request_approved">Запит в друзі підтверджений</string>
+    <string name="friend_request_cancelled">Запит в друзі відхилений</string>
+
+    <string name="pick">Виберіть фото</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+
+    <string name="success_edit_user">Дані оновлено!</string>
+    <string name="message">Повідомлення</string>
+    <string name="send_message">Відправив вам повідомлення</string>
+    <string name="send_sos_message">SOS-повідомлення від </string>
+
+    <string name="photo">Фото</string>
+
+    <string name="remove_message">Ви впевнені, що бажаєте видалити повідомлення?</string>
+    <string name="delete_chat">Видалити чат?</string>
+
+    <string name="send_friend_message">Відправити</string>
+
+    <string name="your_friends_list_is_empty">Ваш список друзів порожній\n\nДобавте свого першого друга</string>
+    <string name="chats_is_empty">Повідомлень немає</string>
+    <string name="friends_is_empty">Друзів немає</string>
+
+    <string name="resendPassword">Отримати пароль</string>
+    <string name="email_sent">Пароль відправлений на вказану пошту</string>
+
+
+    <string name="security_str">Безпека</string>
+    <string name="sos_notification">SOS-сповіщення</string>
+    <string name="pin_my_app">Код блокування</string>
+    <string name="use_fingerprint_to_unlock">Використовувати біометрику для входу в додаток</string>
+
+    <string name="biometric_view_title">Підтвердіть для входу</string>
+    <string name="biometric_view_main_text">Проскануйте відбиток пальця.</string>
+    <string name="biometric_view_use_pin_code">Ввести PIN-код</string>
+
+    <string name="sos_message_body">Введіть текст для SOS-повідомлення</string>
+    <string name="del_chats_if_sos_notification">Очистити історію повідомлень під час надсилання SOS-сповіщень</string>
+    <string name="send_gps_if_sos_notification">Надсилати моє місцезнаходження під час надсилання SOS-сповіщень</string>
+
+    <string name="sos_message_body_example">Привіт! Мені потрібна твоя допомога!</string>
+
+    <string name="sos_description">SOS-сповіщення - екстренне сповіщення поверх всіх активних додатків зі спеціальним звуковим сигналом, яке буде надіслано вашим друзям, яких ви додали у список отримувачів.
+        \n\nЩоб активувати екстренні сповіщення про допомогу Вам слід:
+        \n1. Активувати дану функцію;
+        \n2. Додати текст екстренного повідомлення;
+        \n3. Додати отримувачів зі списку друзів;
+    \n\nЩоб надіслати SOS-сповіщення потрібно:
+       \n- 5 разів поспіль натиснути кнопку зменшення гучності.
+    \n\nПісля цього екстренне сповіщення буде автоматично надіслано всім вашим друзям, яких ви додали у список отримувачів!
+    \n\nУвага!!! Використовуйте екстренні сповіщення тільки за потреби!</string>
+    <string name="sos_message_people">Люди, які отримають SOS-повідомлення</string>
+    <string name="sos_message_empty_list">Поки що список отримувачів порожній...</string>
+    <string name="sos_add_new_people">Додати отримувача</string>
+    <string name="choose_recipient">Виберіть отримувачів</string>
+
+    <string name="enter_new_pin">Введіть PIN-код</string>
+    <string name="reenter_new_pin">Введіть PIN-код ще раз...</string>
+    <string name="pin_description">PIN-код - один із важливих і надійних методів захисту особистої інформації.\n\nЗа допомогою PIN-коду користувач зможе уберегтись від несанкціонованого доступу до акаунту на фізичному пристрої, якщо пристрій вже знаходиться у руках зловмисників.\n\n
+    Щоб почати використовувати дану  функцію слід:
+        \n1. Активувати дану функцію;
+        \n2. Ввести бажаний PIN-код;
+        \n3. Підтвердити введений PIN-код;
+        \n4. Після цього під час кожного наступного входу в додаток програма буде вимагати введення цього PIN-коду;
+        \n\nРекомендуємо використовувати дану функцію безпеки!</string>
+
+    <string name="save">Зберегти</string>
+    <string name="exit">Закрити</string>
+
+
+    <string name="chats_str">Інтерфейс</string>
+    <string name="notification">Сповіщення</string>
+    <string name="chats_settings">Налаштування чатів</string>
+    <string name="language">Мова додатку</string>
+    <string name="accessibility_settings">Налаштування доступності</string>
+    <string name="notification_settings">Налаштування сповіщень</string>
+
+</resources>

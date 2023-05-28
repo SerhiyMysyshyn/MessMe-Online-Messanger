@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.sos_notification.SosNotificationActivity">
+
+    <include
+        android:id="@+id/toolbarContainer3"
+        layout="@layout/toolbar_buttons"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarContainer3">
+
+        <LinearLayout
+            android:id="@+id/pin_app_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/custom_messages_list_item"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginRight="8dp"
+                android:progress="0"
+                android:progressTint="@color/lime" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/pin_app_switch"
+                    android:gravity="center_vertical"
+                    android:text="@string/pin_my_app"
+                    android:textColor="@color/white" />
+
+                <Switch
+                    android:id="@+id/pin_app_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:theme="@style/MySwitch"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:id="@+id/SOS_indicator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/SOS_indicator33"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/on_indicator_1" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="12sp"
+                    android:layout_toEndOf="@+id/SOS_indicator3"
+                    android:layout_toStartOf="@+id/use_fingerprint_switch"
+                    android:gravity="center_vertical"
+                    android:text="@string/use_fingerprint_to_unlock"
+                    android:textColor="@color/text_hint" />
+
+                <Switch
+                    android:id="@+id/use_fingerprint_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:theme="@style/MySwitch"
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="visible"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/custom_friends_list_item" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/pin_description"
+                        android:textColor="@color/text_hint"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pin_app_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/custom_messages_list_item"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/enter_new_pin"
+                android:textAlignment="center"
+                android:textColor="@color/text_hint"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextNumberPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@drawable/rounded_button"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:foreground="@drawable/custom_button_foreground_8dp"
+                android:inputType="numberPassword"
+                android:singleLine="true"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/button_2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="2" />
+
+                    <Button
+                        android:id="@+id/button_3"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:background="@drawable/custom_numeric_button"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:text="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_4"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="4" />
+
+                    <Button
+                        android:id="@+id/button_5"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/button_6"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_7"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="7" />
+
+                    <Button
+                        android:id="@+id/button_8"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="8" />
+
+                    <Button
+                        android:id="@+id/button_9"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_clear"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textSize="12sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:textColor="@color/black"
+                        android:text="Clear" />
+
+                    <Button
+                        android:id="@+id/button_0"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/button_ok"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:foreground="@drawable/navigator_button_ripple_effect"
+                        android:background="@drawable/custom_numeric_button"
+                        android:backgroundTint="@color/lime"
+                        android:text="NEXT" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

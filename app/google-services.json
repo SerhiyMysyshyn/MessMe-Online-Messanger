@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1088707676945",
+    "project_id": "messme-b8eb8",
+    "storage_bucket": "messme-b8eb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088707676945:android:56fa8f46bb487c7224dab0",
+        "android_client_info": {
+          "package_name": "com.serhiymysyshyn.messme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088707676945-4la2ccbhgcbql5ejes02up9i78in3ki1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuGhhRANtxyOaBTE0YX9zIojyLmlN8yV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088707676945-4la2ccbhgcbql5ejes02up9i78in3ki1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

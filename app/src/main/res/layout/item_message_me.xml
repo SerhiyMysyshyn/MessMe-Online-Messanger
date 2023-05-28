@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+                name="message"
+                type="com.serhiymysyshyn.messme.domain.messages.MessageEntity" />
+    </data>
+
+    <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@android:color/transparent"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+        <LinearLayout
+                android:id="@+id/bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/message_me"
+                android:backgroundTint="@{message.type == 3 ? @color/red : @color/my_message_background}"
+                android:foreground="@drawable/custom_button_foreground_8dp_left"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/sosMsgMe"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:visibility="@{message.type == 3 ? View.VISIBLE : View.GONE}"
+                app:srcCompat="@drawable/ic_notification_sos"
+                app:tint="@color/black" />
+
+            <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="@{message.type == 2 ? View.GONE : View.VISIBLE}"
+                    android:text="@{message.message}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="Hello" />
+
+            <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:maxLines="1"
+                    android:backgroundTint="@{message.type == 3 ? @color/white : @color/black}"
+                    android:layout_marginEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    app:date="@{message.date}"
+                    tools:text="10:20 AM" />
+
+
+            <ImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="@{message.type == 2 ? View.VISIBLE : View.GONE}"
+                    app:messageImage="@{message.type == 2 ? message.message : null}"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

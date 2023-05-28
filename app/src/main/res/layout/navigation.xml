@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    
+    
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+                name="account"
+                type="com.serhiymysyshyn.messme.domain.account.AccountEntity" />
+    </data>
+    
+
+    <com.google.android.material.navigation.NavigationView
+
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:background="@color/navigation_background_dark"
+            android:paddingTop="@dimen/nav_header_padding_top">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                android:foreground="@drawable/custom_button_foreground_8dp_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="@dimen/small_margin"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/circle_circle"
+                        android:src="@drawable/ic_account_circle"
+                        app:profileImage="@{account.image}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="@dimen/medium_margin"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivUserImage"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_gravity="center_vertical"
+                            android:lines="1"
+                            android:text="@{account.name}"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            tools:text="@string/name" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/emailAndStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@+id/ivUserImage">
+
+                    <TextView
+                            android:id="@+id/tvUserEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:layout_marginTop="8dp"
+                            android:lines="1"
+                            android:text="@{account.email}"
+                            android:textColor="@color/text_hint"
+                            tools:text="@string/email" />
+
+                    <TextView
+                            android:id="@+id/tvUserStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/small_margin"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:layout_marginTop="3dp"
+                            android:lines="1"
+                            android:text="@{account.status}"
+                            android:textColor="@color/text_hint"
+                            android:visibility="@{account.status.empty ? View.GONE : View.VISIBLE}"
+                            tools:text="Status" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailAndStatus" />
+
+
+            <RelativeLayout
+                    android:id="@+id/btnChats"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                <LinearLayout
+                        android:id="@+id/llChats"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="@drawable/custom_button_foreground_8dp_right"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/imgvChats"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/profile"
+                            android:src="@drawable/baseline_message_24"
+                            android:tint="@color/white" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/white"
+                            android:text="@string/chats"
+                            android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/btnFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                <LinearLayout
+                        android:id="@+id/llFriendsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                    android:foreground="@drawable/custom_button_foreground_8dp_right"
+                    android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/imgvFriendsList"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/profile"
+                            android:src="@drawable/baseline_group_black_36"
+                            android:tint="@color/white" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/white"
+                            android:text="@string/friends"
+                            android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/btnAddFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                <LinearLayout
+                        android:id="@+id/llAddFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:foreground="@drawable/custom_button_foreground_8dp_right"
+                    android:minHeight="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/imgvAddFriend"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/add_friend"
+                            android:src="@drawable/baseline_person_add_black_36"
+                            android:tint="@color/white" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/white"
+                            android:text="@string/add_friend"
+                            android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                        android:id="@+id/containerAddFriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_below="@+id/llAddFriend"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone">
+
+                    <com.andreabaccega.widget.FormEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext_register_login"
+                            android:gravity="center"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="2"
+                            android:padding="10dp"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/darkGrey"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="@dimen/normal_text_size"
+                            tools:emptyErrorString="@string/error_field_must_not_be_empty"
+                            tools:testErrorString="@string/error_email_address_not_valid"
+                            tools:testType="email" />
+
+                    <RelativeLayout
+                            android:id="@+id/rlActions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etEmail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp">
+
+
+                        <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+
+                            <Button
+                                    android:id="@+id/btnAdd"
+                                    style="@style/Button.Primary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="15dp"
+                                    android:paddingRight="15dp"
+                                    android:shadowColor="#E3BFE3"
+                                    android:shadowDx="0"
+                                    android:shadowDy="0"
+                                    android:shadowRadius="5"
+                                    android:text="@string/send_request"
+                                    android:textAllCaps="false"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/normal_text_size" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/btnRequests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                <LinearLayout
+                        android:id="@+id/layoutRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:foreground="@drawable/custom_button_foreground_8dp_right"
+                    android:minHeight="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/imgvRequests"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/profile"
+                            android:src="@drawable/baseline_group_add_black_36"
+                            android:tint="@color/white" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/white"
+                            android:text="@string/friend_requests"
+                            android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                        android:id="@+id/requestContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_below="@+id/layoutRequests"
+                        android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/btnSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                <LinearLayout
+                        android:id="@+id/llSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                    android:foreground="@drawable/custom_button_foreground_8dp_right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/imgvSettings"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:contentDescription="@string/profile"
+                            android:src="@drawable/baseline_settings"
+                            android:tint="@color/white" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:gravity="start|center_vertical"
+                            android:textColor="@color/white"
+                            android:text="@string/settings"
+                            android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical">
+
+            <LinearLayout
+                    android:id="@+id/llloginout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/small_margin"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:id="@+id/imgvloginout"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/logout"
+                        android:src="@drawable/loginout"
+                        android:tint="@color/white" />
+
+                <TextView
+                        android:id="@+id/txtvloginout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="start|center_vertical"
+                        android:textColor="@color/white"
+                        android:text="@string/logout"
+                        android:textSize="16sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#268AB5</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="translucentWhite">#B2FFFFFF</color>
+    <color name="lightGrey">#E0E0E0</color>
+    <color name="grey">#898989</color>
+    <color name="translucent">#B2000000</color>
+    <color name="translucent5">#0D000000</color>
+    <color name="darkGrey">#454e4f</color>
+    <color name="transparent">#00FFFFFF</color>
+
+
+
+    <color name="background">@color/darkGrey</color>
+
+    <color name="background_dark">#222222</color>
+    <color name="navigation_background_dark">#191919</color>
+    <color name="message_panel_background_dark">#191919</color>
+    <color name="background_toolbar">#191919</color>
+    <color name="friend_message_background">#393939</color>
+    <color name="my_message_background">#00B2FF</color>
+    <color name="black">#000000</color>
+    <color name="lime">#32CD32</color>
+    <color name="blue">#005BBB</color>
+    <color name="yellow">#FFD500</color>
+    <color name="red">#ffcc0000</color>
+    <color name="text_hint">#9C9C9C</color>
+
+    <color name="toolbarTextPrimary">@color/white</color>
+    <color name="toolbarTextSecondary">@color/white</color>
+
+    <color name="progressBarTint">@color/white</color>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+    android:minWidth="280dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:maxHeight="500dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_add_friend_background_round"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/closeNewConversationDialog"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:tint="@color/white"
+                android:layout_margin="4dp"
+                android:layout_weight="0"
+                android:foreground="@drawable/navigator_button_ripple_effect"
+                whatever:srcCompat="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/newConversationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Нове повідомлення"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/addNewFriendForConversation"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:tint="@color/white"
+                android:layout_weight="0"
+                android:layout_margin="4dp"
+                android:foreground="@drawable/navigator_button_ripple_effect"
+                whatever:srcCompat="@drawable/ic_action_add_new_friend" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical" >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/newConversationRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_margin="8dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/emptyFriendListLayout"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:text="@string/your_friends_list_is_empty"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/custom_hint_layout_background"
+                        whatever:layout_constraintBottom_toBottomOf="parent"
+                        whatever:layout_constraintEnd_toEndOf="parent"
+                        whatever:layout_constraintStart_toStartOf="parent"
+                        whatever:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:rotation="90"
+                        android:tint="@color/text_hint"
+                        whatever:layout_constraintEnd_toEndOf="parent"
+                        whatever:layout_constraintTop_toTopOf="parent"
+                        whatever:srcCompat="@drawable/ic_action_strilka" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</LinearLayout>

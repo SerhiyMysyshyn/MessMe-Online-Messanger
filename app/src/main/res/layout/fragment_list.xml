@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+    <ImageButton
+        android:id="@+id/mainNavigatorButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        android:foreground="@drawable/navigator_button_ripple_effect"
+        android:background="@drawable/custom_main_functional_button_round"
+        app:srcCompat="@drawable/ic_action_add" />
+
+    <LinearLayout
+        android:id="@+id/emptyListContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/emptyListImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/empty_list" />
+
+        <TextView
+            android:id="@+id/emptyListContainerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text_hint"
+            android:text="@string/chats_is_empty" />
+    </LinearLayout>
+
+
+</FrameLayout>
